@@ -1,8 +1,17 @@
 import React from 'react'
+import Header from './Header'
+import Projects from './Projects'
+import Certifications from './Certifications'
+import Articles from './Articles'
+import Other from './Other'
 
 const App = () => (
   <div>
-    <h1>Aaron Shivers</h1>
+    <Header />
+    <Projects />
+    <Certifications />
+    <Articles />
+    <Other />
   </div>
 )
 
