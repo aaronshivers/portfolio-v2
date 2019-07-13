@@ -3,7 +3,7 @@ import Certification from './Certification'
 
 const Certifications = () => (
   <div>
-    <h2>Certifications</h2>
+    <h3 className="text-center">Certifications</h3>
     <Certification />
   </div>
 )
