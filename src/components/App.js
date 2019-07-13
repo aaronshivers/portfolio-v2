@@ -6,7 +6,7 @@ import Articles from './Articles'
 import Other from './Other'
 
 const App = () => (
-  <div>
+  <div className="container mt-3 mb-3">
     <Header />
     <Projects />
     <Certifications />

@@ -1,10 +1,8 @@
 import React from 'react'
 
 const Header = () => (
-  <div className="header">
-    <div className="content-container">
-      <h1>Aaron Shivers</h1>
-    </div>
+  <div>
+    <h1 className="text-center mb-4">Aaron Shivers</h1>
   </div>
 )
 

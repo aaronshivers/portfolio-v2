@@ -2,25 +2,48 @@ import React from 'react'
 import projects from '../assets/projects'
 
 const Project = () => (
-  <div>
+  <div className="accordion mb-3" id="accordion">
     {
       projects.map((project, i) => (
-        <div key={ i }>
-          <h3>
-            {
-              project.name
-            }
-          </h3>
-          <div>
-            <a href={ project.link }>View Project</a>
-            <a href={ project.code }>View Code</a>
+        <div className="card" key={ i }>
+          <div className="card-header">
+            <h2 className="mb-0 text-center">
+              <button
+                className="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target={ `#collapse${ i }` }
+              >
+                { project.name }
+              </button>
+            </h2>
           </div>
-          <div>
-            <p>
-              {
-                project.description
-              }
-            </p>
+          <div
+            id={ `collapse${ i }` }
+            className="collapse"
+            data-parent="#accordion"
+          >
+            <div className="card-body">
+              <div className="row">
+                <a
+                  className="col text-center"
+                  href={ project.link }
+                >
+                  View Project
+                </a>
+                <a
+                  className="col text-center"
+                  href={ project.code }
+                >
+                  View Code
+                </a>
+              </div>
+              <p className="mt-3">
+                {
+                  project.description
+                }
+              </p>
+            </div>
           </div>
         </div>
       ))

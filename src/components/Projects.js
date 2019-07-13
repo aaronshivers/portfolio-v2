@@ -3,7 +3,7 @@ import Project from './Project'
 
 const Projects = () => (
   <div>
-    <h2>Projects</h2>
+    <h3 className="text-center">Projects</h3>
     <Project />
   </div>
 )
