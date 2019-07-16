@@ -3,7 +3,7 @@ import Article from './Article'
 
 const Articles = () => (
   <div>
-    <h2>Articles</h2>
+    <h2 className="text-center">Articles</h2>
     <Article />
   </div>
 )

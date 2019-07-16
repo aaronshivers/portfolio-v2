@@ -1,20 +1,10 @@
 import React from 'react'
-import other from '../assets/other'
+import OtherItem from './OtherItem'
 
 const Other = () => (
   <div>
-    <h2>Other</h2>
-    {
-      other.map((other, i) => (
-        <div key={ i }>
-          <a href={ other.link }>
-            {
-              other.name
-            }
-          </a>
-        </div>
-      ))
-    }
+    <h2 className="text-center">Other</h2>
+    <OtherItem />
   </div>
 )
 

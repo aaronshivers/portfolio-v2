@@ -1,7 +1,7 @@
 import React from 'react'
-import articles from '../assets/articles'
+import other from '../assets/other'
 
-const Article = () => (
+const OtherItem = () => (
 
   <div className="accordion mb-3 border-bottom">
     <div className="card">
@@ -11,26 +11,26 @@ const Article = () => (
             className="btn btn-link"
             type="button"
             data-toggle="collapse"
-            data-target="#collapseArticles"
+            data-target="#collapseOthers"
           >
-            View Articles
+            View Other Items
           </button>
         </h2>
       </div>
 
-      <div id="collapseArticles" className="collapse">
+      <div id="collapseOthers" className="collapse">
         <div className="list-group">
           <div className="list-group">
             {
-              articles.map((certification, i) => (
+              other.map((other, i) => (
                 <a
                   className="list-group-item list-group-item-action border-right-0 border-left-0"
                   key={ i }
-                  href={ certification.link }
+                  href={ other.link }
                   target="_blank"
                   rel="noreferrer"
                 >
-                  { certification.name }
+                  { other.name }
                 </a>
               ))
             }
@@ -41,4 +41,4 @@ const Article = () => (
   </div>
 )
 
-export default Article
+export default OtherItem
