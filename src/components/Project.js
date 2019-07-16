@@ -1,5 +1,7 @@
 import React from 'react'
 import projects from '../assets/projects'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const Project = () => (
   <div className="accordion mb-3" id="accordion">
@@ -35,7 +37,8 @@ const Project = () => (
                   className="col text-center"
                   href={ project.code }
                 >
-                  View Code
+                  <FontAwesomeIcon icon={ faGithub } />
+                  <span> View Code</span>
                 </a>
               </div>
               <p className="mt-3">
