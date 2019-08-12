@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-v2",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aaronshivers/portfolio-v2.git"
+    "url": "git+https://github.com/aaronshivers/portfolio.git"
   },
   "author": "aaron shivers",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/aaronshivers/portfolio-v2/issues"
+    "url": "https://github.com/aaronshivers/portfolio/issues"
   },
-  "homepage": "https://github.com/aaronshivers/portfolio-v2#readme",
+  "homepage": "https://github.com/aaronshivers/portfolio#readme",
   "devDependencies": {
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.4",
