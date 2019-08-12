@@ -1,4 +1,9 @@
 module.exports = [{
+  name: `Timesheet`,
+  link: `http://timesheet.aaronshivers.com/`,
+  code: `https://github.com/aaronshivers/timesheet-v2`,
+  description: `An application for tracking time spent on jobs. This uses JavaScript, React, Firebase, Express.js, Bootstrap, and Node.js.`
+}, {
   name: 'Todo App',
   link: 'http://todo.aaronshivers.com/',
   code: 'https://github.com/aaronshivers/todo',
@@ -8,11 +13,6 @@ module.exports = [{
   link: `http://chat.aaronshivers.com/`,
   code: `https://github.com/aaronshivers/node-chat-app`,
   description: `This is a group chat application. It uses socket.io to keep the connection to the server open for updates. It's from a tutorial, except that the instructor used jQuery, and I used vanilla javascript. He also used mustache.js, and I used EJS. I was able to avoid using some external libraries by using built-in JavaScript features that the instructor didn't use.`
-}, {
-  name: `Timesheet`,
-  link: `http://timesheet.aaronshivers.com/`,
-  code: `https://github.com/aaronshivers/timesheet`,
-  description: `A single page application for tracking time spent on jobs. This uses JavaScript without any front-end frameworks.`
 }, {
   name: `Blog Template`,
   link: `http://blog.aaronshivers.com/`,

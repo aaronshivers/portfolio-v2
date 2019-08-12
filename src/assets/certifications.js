@@ -1,8 +1,12 @@
 module.exports = [{
+  name: `The Complete React Developer Course (w/ Hooks and Redux)`,
+  date: `2019-07-01`,
+  link: `https://www.udemy.com/certificate/UC-7JXXQQUB/`
+}, {
   name: `Build a Blockchain & Cryptocurrency | Full-Stack Edition`,
   date: `2019-06-20`,
   link: `https://www.udemy.com/certificate/UC-Z9HZCZLP/`
-},{
+}, {
   name: `Advanced JavaScript Concepts`,
   date: `2019-04-01`,
   link: `https://www.udemy.com/certificate/UC-28WZJAIT/`
