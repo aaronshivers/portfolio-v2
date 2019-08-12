@@ -1,57 +1,43 @@
 import React from 'react'
+import { Accordion, Card, Button, ListGroup, Row, Col } from 'react-bootstrap'
+import { FaGithub } from 'react-icons/fa'
 import projects from '../assets/projects'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const Project = () => (
-  <div className="accordion mb-3" id="accordion">
+  <Accordion className="mb-3">
     {
-      projects.map((project, i) => (
-        <div className="card" key={ i }>
-          <div className="card-header">
-            <h2 className="mb-0 text-center">
-              <button
-                className="btn btn-link collapsed"
-                type="button"
-                data-toggle="collapse"
-                data-target={ `#collapse${ i }` }
-              >
-                { project.name }
-              </button>
-            </h2>
-          </div>
-          <div
-            id={ `collapse${ i }` }
-            className="collapse"
-            data-parent="#accordion"
-          >
-            <div className="card-body">
-              <div className="row">
-                <a
-                  className="col text-center"
-                  href={ project.link }
-                >
-                  View Project
-                </a>
-                <a
-                  className="col text-center"
-                  href={ project.code }
-                >
-                  <FontAwesomeIcon icon={ faGithub } />
-                  <span> View Code</span>
-                </a>
-              </div>
-              <p className="mt-3">
-                {
-                  project.description
-                }
-              </p>
-            </div>
-          </div>
-        </div>
+      projects.map(({ name, link, code, description }, i) => (
+        <Card key={ i }>
+          <Card.Header className="text-center">
+            <Accordion.Toggle
+              as={ Button }
+              variant="link"
+              eventKey={ i }
+            >
+              { name }
+            </Accordion.Toggle>
+          </Card.Header>
+
+          <Accordion.Collapse eventKey={ i }>
+            <Card.Body>
+              <Row>
+                <Col className="text-center">
+                  <a href={ link }>View Project</a>
+                </Col>
+                <Col className="text-center">
+                  <a href={ code }>
+                    <FaGithub />
+                    <span> View Code</span>
+                  </a>
+                </Col>
+              </Row>
+              <p className="mt-3">{ description }</p>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
       ))
     }
-  </div>
+  </Accordion>
 )
 
 export default Project
