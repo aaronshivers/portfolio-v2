@@ -23,7 +23,7 @@ const Certifications = () => (
             <ListGroup variant="flush">
               {
                 certifications.map((certification, i) => (
-                  <Certification key={ i } certification={ certification } />
+                  <Certification key={ i } { ...certification } />
                 ))
               }
             </ListGroup>
