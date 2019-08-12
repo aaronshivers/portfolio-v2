@@ -1,44 +1,42 @@
 import React from 'react'
+import { Accordion, Card, Button, ListGroup } from 'react-bootstrap'
 import certifications from '../assets/certifications'
 
 const Certification = () => (
 
-  <div className="accordion mb-3 border-bottom">
-    <div className="card">
-      <div className="card-header">
-        <h2 className="mb-0 text-center">
-          <button
-            className="btn btn-link"
-            type="button"
-            data-toggle="collapse"
-            data-target="#collapseCertifications"
-          >
-            View Certifications
-          </button>
-        </h2>
-      </div>
+  <Accordion className="mb-3 border-bottom">
+    <Card>
+      <Card.Header className="text-center">
+        <Accordion.Toggle
+          as={ Button }
+          variant="link"
+          eventKey="0"
+        >
+          View Certifications
+        </Accordion.Toggle>
+      </Card.Header>
 
-      <div id="collapseCertifications" className="collapse">
-        <div className="list-group">
-          <div className="list-group">
+      <Accordion.Collapse eventKey="0">
+        <Card.Body>
+          <ListGroup variant="flush">
             {
               certifications.map((certification, i) => (
-                <a
-                  className="list-group-item list-group-item-action border-right-0 border-left-0"
-                  key={ i }
-                  href={ certification.link }
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  { certification.name }
-                </a>
+                <ListGroup.Item key={ i }>
+                  <a
+                    href={ certification.link }
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    { certification.name }
+                  </a>
+                </ListGroup.Item>
               ))
             }
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+          </ListGroup>
+        </Card.Body>
+      </Accordion.Collapse>
+    </Card>
+  </Accordion>
 )
 
 export default Certification
