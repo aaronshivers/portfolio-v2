@@ -1,44 +1,68 @@
-import React from 'react'
-import other from '../assets/other'
+import React, { useState } from 'react'
+import { Card, Accordion, Button, ListGroup } from 'react-bootstrap'
+import { FaGithub, FaLinkedin, FaFile } from 'react-icons/fa'
 
-const OtherItem = () => (
+const otherData = [{
+  name: 'GitHub',
+  link: 'https://github.com/aaronshivers',
+  icon: <FaGithub />
+}, {
+  name: 'LinkedIn',
+  link: 'https://www.linkedin.com/in/aaron-shivers/',
+  icon: <FaLinkedin />
+}, {
+  name: 'Resume',
+  link: 'https://docs.google.com/document/d/1sPzUb4KdrwGRgepia-hnnaJ3xkJInzlUs6LZ9Fnimoo/edit?usp=sharing',
+  icon: <FaFile />
+}]
 
-  <div className="accordion mb-3 border-bottom">
-    <div className="card">
-      <div className="card-header">
-        <h2 className="mb-0 text-center">
-          <button
-            className="btn btn-link"
-            type="button"
-            data-toggle="collapse"
-            data-target="#collapseOthers"
+const OtherItem = () => {
+  const [ other ] = useState(otherData)
+
+  return (
+
+    <Accordion
+      defaultActiveKey="0"
+      className="mb-3 border-bottom"
+    >
+      <Card>
+        <Card.Header className="text-center">
+          <Accordion.Toggle
+            as={ Button }
+            variant="link"
+            eventKey="0"
           >
-            View Other Items
-          </button>
-        </h2>
-      </div>
+            <span>
+              View Other Items
+            </span>
+          </Accordion.Toggle>
+        </Card.Header>
 
-      <div id="collapseOthers" className="collapse">
-        <div className="list-group">
-          <div className="list-group">
-            {
-              other.map((other, i) => (
-                <a
-                  className="list-group-item list-group-item-action border-right-0 border-left-0"
-                  key={ i }
-                  href={ other.link }
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  { other.name }
-                </a>
-              ))
-            }
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-)
+        <Accordion.Collapse eventKey="0">
+          <Card.Body>
+            <ListGroup variant="flush">
+              {
+                other.map(({ link, icon, name }, i) => {
+
+                  return (
+                    <ListGroup.Item key={ i }>
+                      <a
+                        href={ link }
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <span>{ icon }</span> <span>{ name }</span>
+                      </a>
+                    </ListGroup.Item>
+                  )}
+                )
+              }
+            </ListGroup>
+          </Card.Body>
+        </Accordion.Collapse>
+      </Card>
+    </Accordion>
+  )
+}
 
 export default OtherItem
