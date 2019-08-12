@@ -23,10 +23,7 @@ const Other = () => {
   return (
     <div>
       <h2 className="text-center">Other</h2>
-      <Accordion
-        defaultActiveKey="0"
-        className="mb-3 border-bottom"
-      >
+      <Accordion className="mb-3 border-bottom">
         <Card>
           <Card.Header className="text-center">
             <Accordion.Toggle

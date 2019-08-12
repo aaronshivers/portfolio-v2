@@ -6,10 +6,7 @@ import articles from '../assets/articles'
 const Articles = () => (
   <div>
     <h2 className="text-center">Articles</h2>
-    <Accordion
-      defaultActiveKey="0"
-      className="mb-3 border-bottom"
-    >
+    <Accordion className="mb-3 border-bottom">
       <Card>
         <Card.Header className="text-center">
           <Accordion.Toggle
