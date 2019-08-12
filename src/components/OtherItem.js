@@ -32,9 +32,7 @@ const OtherItem = () => {
             variant="link"
             eventKey="0"
           >
-            <span>
-              View Other Items
-            </span>
+            View Other Items
           </Accordion.Toggle>
         </Card.Header>
 
