@@ -28,4 +28,4 @@ module.exports = [{
   link: `http://weather.aaronshivers.com/`,
   code: `https://github.com/aaronshivers/weather`,
   description: `This is an application for checking the weather. It uses the Google Geocoding API for the location search, then passes that to the DarkSky API for the weather. The idea came from a command line application I saw in a tutorial. I converted it to a web application, and then updated it to use JavaScript promises and async/await.`
-}, ]
+}]
