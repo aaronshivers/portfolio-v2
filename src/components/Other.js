@@ -13,7 +13,7 @@ const otherData = [{
   icon: <FaLinkedin />
 }, {
   name: 'Resume',
-  link: 'https://docs.google.com/document/d/1sPzUb4KdrwGRgepia-hnnaJ3xkJInzlUs6LZ9Fnimoo/edit?usp=sharing',
+  link: 'https://docs.google.com/document/d/1t6oBgAm5yehDEdzaFHA8NlyhNymaL6a_gVV9b3U9MgM/edit?usp=sharing',
   icon: <FaFile />
 }]
 
