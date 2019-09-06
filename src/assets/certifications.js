@@ -1,4 +1,8 @@
 module.exports = [{
+  name: `CSS - The Complete Guide (incl. Flexbox, Grid & Sass)`,
+  date: `2019-09-01`,
+  link: `https://www.udemy.com/certificate/UC-EILZUIT6/`
+},{
   name: `The Complete React Developer Course (w/ Hooks and Redux)`,
   date: `2019-07-01`,
   link: `https://www.udemy.com/certificate/UC-7JXXQQUB/`
